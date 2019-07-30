@@ -1,0 +1,40 @@
+
+
+<div class="web-list-item">
+		<div class="row">
+			<div class="col-xs-3">
+				{{ _("Fee") }}
+			</div>
+			<div class="col-xs-3">
+				{{ _("Grand Total") }}
+			</div>
+			<div class="col-xs-3">
+				{{ _("Paid Amount") }}
+			</div>
+			<div class="col-xs-3">
+				{{ _("Outstanding Amount") }}
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-xs-3">
+			<a href = "/{{ pathname }}?name={{doc.name}}/">
+			{{ doc.name }}
+			</a>
+		</div>
+		<div class="col-xs-3">
+			{{ doc.grand_total }}
+		</div>
+		<div class="col-xs-3">
+			{{ doc.outstanding_amount - doc.grand_total }}
+		</div>
+		<div class="col-xs-3">
+			{{ doc.outstanding_amount }}
+		</div>
+	</div>
+</div>
+<script>
+	var elements = document.getElementsByClassName('btn-new');
+	while(elements.length > 0){
+		elements[0].parentNode.removeChild(elements[0]);
+	}
+</script>

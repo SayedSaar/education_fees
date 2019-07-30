@@ -1,0 +1,22 @@
+<div class="web-list-item">
+	
+		<div class="row">
+			<!--<div class="col-xs-3">
+				{{ doc.name }}
+			</div>-->
+			<div class="col-xs-12">
+				<a href = "/{{ pathname }}?name={{ doc.name }}">
+				{% if doc.first_name %}{{ doc.first_name }}{% endif %}
+				{% if doc.middle_name %} {{ doc.middle_name }}{% endif %}
+				{% if doc.last_name %} {{ doc.last_name }}{% endif %}
+				</a>
+			</div>
+		</div>
+	
+</div>
+<script>
+	var elements = document.getElementsByClassName('btn-new');
+	while(elements.length > 0){
+		elements[0].parentNode.removeChild(elements[0]);
+	}
+</script>
